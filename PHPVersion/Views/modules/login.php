@@ -8,11 +8,11 @@
 
     <form method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email" name="libreta">
+        <input type="text" class="form-control" placeholder="Email" name="libreta" autocomplete="off">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" placeholder="Password" name="password" autocomplete="off">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -22,6 +22,12 @@
         </div>
         <!-- /.col -->
       </div>
+
+      <?php
+        $ingreso = new UsuariosController();
+        $ingreso -> IniciarSesionC();
+      ?>
+
     </form>
 
   </div>

@@ -53,7 +53,7 @@
     if (isset($_GET["url"])){
       $url = explode("/", $_GET["url"]);
 
-      if($url[0] == "inicio"){
+      if($url[0] == "inicio" || $url[0] == "salir"){
         include "modules/".$url[0].".php";
       }
 
@@ -62,7 +62,7 @@
     }
     echo '</div>';
   }else if(isset($_GET["url"])){
-    if($_GET["url"] == "Ingresar"){
+    if($_GET["url"] == "Login"){
       include 'modules/login.php';
     }
   }else{
