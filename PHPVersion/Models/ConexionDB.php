@@ -1,8 +1,14 @@
 <?php
     class ConexionDB{
         public function DBConnection(){
-            $bd = new PDO("mysql:host=localhost; dbname=sei_academia_guerra", "root", "");
-            $bd -> exec("set names utf8");
+            $host = 'localhost';
+            $databaseName = 'sei_academia_guerra';
+            $username = 'root';
+            $password = '';
+
+
+            $bd = new PDO("mysql:host=$host;dbname=$databaseName", $username, $password);
+            $bd -> exec("SET NAMES UTF8");
 
             return $bd;
         }
