@@ -35,7 +35,7 @@
 
 
 
-<body class="hold-transition skin-blue sidebar-mini login-page">
+<body class="hold-transition skin-black-light sidebar-mini login-page">
 <!-- Site wrapper -->
 
   <?php
@@ -53,7 +53,7 @@
     if (isset($_GET["url"])){
       $url = explode("/", $_GET["url"]);
 
-      if($url[0] == "inicio" || $url[0] == "salir"){
+      if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "mis-datos"){
         include "modules/".$url[0].".php";
       }
 
